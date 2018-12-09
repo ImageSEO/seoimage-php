@@ -1,0 +1,33 @@
+{
+    "name": "seoimage/seoimage-php",
+    "description": "PHP library for the SeoImage API",
+    "homepage": "https://seoimage.io/",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thomas Deneulin",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "support@seoimage.io",
+        "source": "https://github.com/seoimage/seoimage-php"
+    },
+    "keywords": [
+        "php",
+        "seoimage",
+        "seoimage-library",
+        "seo",
+        "seotools",
+        "image"
+    ],
+    "require": {
+        "php": ">=5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "SeoImage\\": "src/"
+        }
+    }
+}
