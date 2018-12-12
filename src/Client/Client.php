@@ -42,9 +42,10 @@ class Client
     public function __construct($apiKey, $options = [])
     {
         $this->apiKey = $apiKey;
+
         $this
             ->setHttpClient(null, [
-                'Authorization' => $this->apiKey
+                'Authorization:' . $this->apiKey
             ])
             ->setOptions($options)
             ->loadResources();

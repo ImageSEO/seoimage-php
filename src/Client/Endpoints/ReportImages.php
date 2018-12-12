@@ -9,14 +9,20 @@ class ReportImages extends AbstractEndpoint
 {
     const RESOURCE_NAME = "report_images";
 
-    public function generate($filePath, $query = null)
+    /**
+     * @param string $filePath
+     * @param array $query Query parameters
+     * @return array
+     */
+    public function generateReport($filePath, $query = null)
     {
-        $cFile = curl_file_create($filePath);
+        $infoFile = mime_content_type($filePath);
 
-        $result = $this->makeRequest('FILE', '/v1/images', [
+        $cFile = curl_file_create($filePath);
+        $cFile->setMimeType($infoFile);
+
+        return $this->makeRequest('FILE', '/v1/images', [
             'imageFile' => $cFile
         ], $query);
-        var_dump($result);
-        die;
     }
 }
