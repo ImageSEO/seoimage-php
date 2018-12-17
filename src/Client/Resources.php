@@ -1,8 +1,8 @@
 <?php
 
-namespace SeoImage\Client;
+namespace ImageSeo\Client;
 
-use SeoImage\Client\Exceptions\ResourceNotExist;
+use ImageSeo\Client\Exceptions\ResourceNotExist;
 
 trait Resources
 {
@@ -19,7 +19,7 @@ trait Resources
             }
 
             $fileNoExtension = str_replace('.php', '', $filename);
-            $class = '\\SeoImage\Client\\Endpoints\\' . $namespace . $fileNoExtension;
+            $class = '\\ImageSeo\Client\\Endpoints\\' . $namespace . $fileNoExtension;
             if (! defined($class . '::RESOURCE_NAME')) {
                 continue;
             }

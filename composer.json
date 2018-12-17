@@ -1,7 +1,7 @@
 {
-    "name": "seoimage/seoimage-php",
-    "description": "PHP library for the SeoImage API",
-    "homepage": "https://seoimage.io/",
+    "name": "imageseo/imageseo-php",
+    "description": "PHP library for the ImageSeo API",
+    "homepage": "https://imageseo.io/",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -11,13 +11,13 @@
         }
     ],
     "support": {
-        "email": "support@seoimage.io",
-        "source": "https://github.com/seoimage/seoimage-php"
+        "email": "support@imageseo.io",
+        "source": "https://github.com/imageseo/imageseo-php"
     },
     "keywords": [
         "php",
-        "seoimage",
-        "seoimage-library",
+        "imageseo",
+        "imageseo-library",
         "seo",
         "seotools",
         "image"
@@ -27,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SeoImage\\": "src/"
+            "ImageSeo\\": "src/"
         }
     }
 }

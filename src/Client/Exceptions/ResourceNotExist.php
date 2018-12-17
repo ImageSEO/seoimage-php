@@ -1,11 +1,11 @@
 <?php
 
-namespace SeoImage\Client\Exceptions;
+namespace ImageSeo\Client\Exceptions;
 
 use Exception;
 
 /**
- * @package SeoImage\Client\Exceptions
+ * @package ImageSeo\Client\Exceptions
  */
 class ResourceNotExist extends Exception
 {

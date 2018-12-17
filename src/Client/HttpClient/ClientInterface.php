@@ -1,5 +1,5 @@
 <?php
-namespace SeoImage\Client\HttpClient;
+namespace ImageSeo\Client\HttpClient;
 
 interface ClientInterface
 {

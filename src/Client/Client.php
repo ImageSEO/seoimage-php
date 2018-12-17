@@ -1,20 +1,20 @@
 <?php
 
-namespace SeoImage\Client;
+namespace ImageSeo\Client;
 
-use SeoImage\Client\HttpClient\ClientInterface;
-use SeoImage\Client\HttpClient\CurlClient;
-use SeoImage\Client\Resources;
+use ImageSeo\Client\HttpClient\ClientInterface;
+use ImageSeo\Client\HttpClient\CurlClient;
+use ImageSeo\Client\Resources;
 
 /**
- * @package SeoImage\Client
+ * @package ImageSeo\Client
  */
 class Client
 {
     use Resources;
 
     /**
-     * SeoImage API Key
+     * ImageSeo API Key
      *
      * @var string
      */
@@ -36,13 +36,13 @@ class Client
 
     /**
      * Client constructor.
-     * @param string    $apiKey     your SeoImage API key
+     * @param string    $apiKey     your ImageSeo API key
      * @param array     $options    an array of options, currently only "host" is implemented
      */
     public function __construct($apiKey, $options = [])
     {
         $this->apiKey = $apiKey;
-
+        $options['apiKey'] = $apiKey;
         $this
             ->setHttpClient(null, [
                 'Authorization:' . $this->apiKey

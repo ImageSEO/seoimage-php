@@ -1,45 +1,44 @@
 <?php
 
-namespace SeoImage\Client\Endpoints;
+namespace ImageSeo\Client\Endpoints;
 
 /**
- * @package SeoImage\Client\Endpoints
+ * @package ImageSeo\Client\Endpoints
  */
 class ApiKeysImages extends AbstractEndpoint
 {
     const RESOURCE_NAME = "api_keys_images";
 
     /**
-     * @param string $keyProject
      * @return string
      */
-    protected function getPostRoute($keyProject)
+    protected function getPostRoute()
     {
-        return sprintf('/v1/api_keys/%s/images', $keyProject);
+        $options = $this->getOptions();
+
+        return sprintf('/v1/api_keys/%s/images', $options['apiKey']);
     }
 
     /**
-     * @param string $apiKey
      * @param array $data
      * @param array $query Query parameters
      * @return array
      */
-    public function generateReportFromUrl($apiKey, $data, $query = null)
+    public function generateReportFromUrl($data, $query = null)
     {
         if (! isset($data['url'])) {
             throw new \Exception("Miss URL params");
         }
 
-        return $this->makeRequest('POST', $this->getPostRoute($apiKey), $data, $query);
+        return $this->makeRequest('POST', $this->getPostRoute(), $data, $query);
     }
 
     /**
-     * @param string $apiKey
      * @param array $data
      * @param array $query Query parameters
      * @return array
      */
-    public function generateReportFromFile($apiKey, $data, $query = null)
+    public function generateReportFromFile($data, $query = null)
     {
         if (! isset($data['filePath'])) {
             throw new \Exception("Miss filePath params");
@@ -55,6 +54,6 @@ class ApiKeysImages extends AbstractEndpoint
 
         $data['imageFile'] = $cFile;
 
-        return $this->makeRequest('FILE', $this->getPostRoute($apiKey), $data, $query);
+        return $this->makeRequest('FILE', $this->getPostRoute(), $data, $query);
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace SeoImage\Client\HttpClient;
+namespace ImageSeo\Client\HttpClient;
 
 // @codingStandardsIgnoreStart
 // PSR2 requires all constants be upper case. Sadly, the CURL_SSLVERSION
@@ -216,8 +216,6 @@ class CurlClient implements ClientInterface
         } elseif ($method === 'file') {
             $options[CURLOPT_POST] = 1;
             $options[CURLOPT_POSTFIELDS] = $body;
-        // array_push($headers, 'Content-Type: application/json');
-            // array_push($headers, 'Content-Length: ' . strlen($data_string));
         } else {
             throw new \Exception('Unrecognized method ' . strtoupper($method));
         }
@@ -304,18 +302,18 @@ class CurlClient implements ClientInterface
             case CURLE_COULDNT_CONNECT:
             case CURLE_COULDNT_RESOLVE_HOST:
             case CURLE_OPERATION_TIMEOUTED:
-                $msg = "Could not connect to SeoImage ($url).  Please check your "
+                $msg = "Could not connect to ImageSeo ($url).  Please check your "
                     . "internet connection and try again. ";
                 break;
             case CURLE_SSL_CACERT:
             case CURLE_SSL_PEER_CERTIFICATE:
-                $msg = "Could not verify SeoImage's SSL certificate.  Please make sure "
+                $msg = "Could not verify ImageSeo's SSL certificate.  Please make sure "
                     . "that your network is not intercepting certificates.  "
                     . "(Try going to $url in your browser.)  "
                     . "If this problem persists,";
                 break;
             default:
-                $msg = "Unexpected error communicating with SeoImage.  "
+                $msg = "Unexpected error communicating with ImageSeo.  "
                     . "If this problem persists,";
         }
         $msg .= " let us know at support@seoimage.io .\n\n(Network error [errno $errno]: $message)";

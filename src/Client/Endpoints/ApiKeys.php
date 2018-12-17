@@ -1,9 +1,9 @@
 <?php
 
-namespace SeoImage\Client\Endpoints;
+namespace ImageSeo\Client\Endpoints;
 
 /**
- * @package SeoImage\Client\Endpoints
+ * @package ImageSeo\Client\Endpoints
  */
 class ApiKeys extends AbstractEndpoint
 {
