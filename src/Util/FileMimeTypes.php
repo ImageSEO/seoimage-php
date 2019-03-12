@@ -135,7 +135,7 @@ class FileMimeTypes
 
         foreach ($mimes as $ext_preg => $mime_match) {
             $ext_preg = '!\.(' . $ext_preg . ')$!i';
-            if (preg_match($ext_preg, $filename, $ext_matches)) {
+            if (preg_match($ext_preg, $this->filename, $ext_matches)) {
                 $type = $mime_match;
                 break;
             }
