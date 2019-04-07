@@ -9,7 +9,7 @@ use ImageSeo\Util\FileMimeTypes;
  */
 class ReportImages extends AbstractEndpoint
 {
-    const RESOURCE_NAME = "ImageReport";
+    const RESOURCE_NAME = "ImageReports";
 
     /**
      * @return string

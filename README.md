@@ -32,7 +32,7 @@ require_once __DIR__. '/vendor/autoload.php';
 
     -   getOwner()
 
--   `ImageReport`
+-   `ImageReports`
     -   generateReportFromUrl($data,$query = null)
     -   generateReportFromFile($data,$query = null)
 
