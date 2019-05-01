@@ -6,8 +6,15 @@ use ImageSeo\Client\Exceptions\ResourceNotExist;
 
 trait Resources
 {
+    /**
+     * @var array
+     */
     protected $resources = [];
     
+    /**
+     * @param string $path
+     * @return void
+     */
     protected function loadResources($path = __DIR__ . '/Endpoints')
     {
         $files      = array_diff(scandir($path), [ '..', '.' ]);
