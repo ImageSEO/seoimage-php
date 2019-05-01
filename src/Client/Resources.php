@@ -23,6 +23,7 @@ trait Resources
 
             $fileNoExtension = str_replace('.php', '', $filename);
             $class = '\\ImageSeo\Client\\Endpoints\\' . $fileNoExtension;
+
             if (! defined($class . '::RESOURCE_NAME')) {
                 continue;
             }
