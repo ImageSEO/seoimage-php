@@ -216,7 +216,14 @@ class CurlClient implements ClientInterface
         } elseif ($method === 'file') {
             $options[CURLOPT_POST] = 1;
             $options[CURLOPT_POSTFIELDS] = $body;
-        } else {
+        }
+        else if($method === 'image'){
+            $options[CURLOPT_HEADER] = 0;
+            $options[CURLOPT_POST] = 1;
+            $options[CURLOPT_POSTFIELDS] = $body;
+            $options[CURLOPT_BINARYTRANSFER] = 1;
+        }
+        else {
             throw new \Exception('Unrecognized method ' . strtoupper($method));
         }
 

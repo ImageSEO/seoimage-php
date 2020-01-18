@@ -43,8 +43,9 @@ abstract class AbstractEndpoint
                 $query,
                 $body
             );
-
-            $array = json_decode($rawBody, true);
+            if($method !== "IMAGE"){
+                $array = json_decode($rawBody, true);
+            }
         } catch (\Exception $e) {
             throw new \Exception($e->getMessage());
         }
