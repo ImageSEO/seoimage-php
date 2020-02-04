@@ -259,6 +259,8 @@ class CurlClient implements ClientInterface
         $options[CURLOPT_TIMEOUT] = $this->getTimeout();
         $options[CURLOPT_HTTPHEADER] = $headers;
         $options[CURLOPT_SSL_VERIFYPEER] = false;
+        $options[CURLOPT_FOLLOWLOCATION] = true;
+        
         return $options;
     }
     /**
