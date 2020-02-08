@@ -218,10 +218,12 @@ class CurlClient implements ClientInterface
             $options[CURLOPT_POSTFIELDS] = $body;
         }
         else if($method === 'image'){
-            $options[CURLOPT_HEADER] = 0;
+            $data_string = json_encode($body);
             $options[CURLOPT_POST] = 1;
-            $options[CURLOPT_POSTFIELDS] = $body;
+            $options[CURLOPT_POSTFIELDS] = $data_string;
             $options[CURLOPT_BINARYTRANSFER] = 1;
+            array_push($headers, 'Content-Type: application/json');
+            array_push($headers, 'Content-Length: ' . strlen($data_string));
         }
         else {
             throw new \Exception('Unrecognized method ' . strtoupper($method));
