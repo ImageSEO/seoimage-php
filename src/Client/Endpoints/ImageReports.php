@@ -18,7 +18,7 @@ class ImageReports extends AbstractEndpoint
     {
         $options = $this->getOptions();
 
-        return sprintf('/v1/external/projects/images');
+        return sprintf('/projects/images');
     }
 
     /**
