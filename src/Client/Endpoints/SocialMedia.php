@@ -17,7 +17,7 @@ class SocialMedia extends AbstractEndpoint
      */
     public function generateSocialMediaImage($data)
     {
-        $url = sprintf('/v1/external/projects/social-media');
+        $url = sprintf('/projects/social-media');
         return $this->makeRequest('IMAGE', $url, $data, [], false);
     }
 }

@@ -14,7 +14,7 @@ class Projects extends AbstractEndpoint
      */
     public function getOwner()
     {
-        $url = sprintf('/v1/external/projects/owner');
+        $url = sprintf('/projects/owner');
         return $this->makeRequest('GET', $url);
     }
 }
