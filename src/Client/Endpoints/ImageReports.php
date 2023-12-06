@@ -56,7 +56,7 @@ class ImageReports extends AbstractEndpoint
         $cFile = curl_file_create($filePath);
         $cFile->setMimeType($mimeType);
 
-        $data['imageFile'] = $cFile;
+        $data['file'] = $cFile;
 
         return $this->makeRequest('FILE', $this->getPostRoute(), $data, $query);
     }
