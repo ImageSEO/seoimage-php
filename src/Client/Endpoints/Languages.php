@@ -16,6 +16,6 @@ class Languages extends AbstractEndpoint
      */
     public function getLanguages()
     {
-        return $this->makeRequest('GET', '/v1/public/langs');
+        return $this->makeRequest('GET', '/projects/langs');
     }
 }
