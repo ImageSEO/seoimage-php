@@ -7,6 +7,8 @@ namespace ImageSeo\Util;
  */
 class FileMimeTypes
 {
+    public $filename;
+
     /**
      * @param string $filename
      */

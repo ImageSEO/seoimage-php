@@ -7,6 +7,9 @@ namespace ImageSeo\Client\Endpoints;
  */
 abstract class AbstractEndpoint
 {
+    public $client;
+    public $options;
+
     public function __construct($client, $options)
     {
         $this->client = $client;
