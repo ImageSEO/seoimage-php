@@ -59,7 +59,7 @@ class Client
     public function defaultOptions()
     {
         return [
-            'host'  => 'https://staging-api.imageseo.com'
+            'host'  => 'http://api.imageseo.com/'
         ];
     }
 
