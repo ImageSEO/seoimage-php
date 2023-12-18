@@ -59,7 +59,7 @@ class Client
     public function defaultOptions()
     {
         return [
-            'host'  => 'http://api.imageseo.com/'
+            'host'  => 'https://api.imageseo.com/'
         ];
     }
 
